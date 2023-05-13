@@ -15,7 +15,16 @@
     box-shadow: $shadow-2xl;
     cursor: pointer;
     text-align: center;
-    transform: all 0.3s;
+    transition: all 0.3s;
+
+    &:hover {
+      background-image: radial-gradient(
+        $color-primary-light,
+        $color-primary-dark
+      );
+      transform: translateY(0.5rem);
+      box-shadow: $shadow-4xl;
+    }
   }
 
   &__background {
@@ -44,7 +53,6 @@
     transition: all 0.8s cubic-bezier(0.64, 0.27, 0, 1.13);
   }
   &__list {
-    position: absolute;
     @include centerfix;
     list-style: none;
     text-align: center;
