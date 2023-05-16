@@ -16,6 +16,10 @@
     &:not(:last-child) {
       margin-right: $gutter-horzontal;
     }
+
+    @include respond(tab-port) {
+      margin-right: 0;
+    }
   }
 
   .col-1-of-2 {
